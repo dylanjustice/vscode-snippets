@@ -1,0 +1,25 @@
+{
+	"Triple A Test Notation": {
+		"prefix": "aaa",
+		"body": [
+			"// Arrange",
+			"$1",
+			"// Act",
+			"",
+			"// Assert",
+			""
+		],
+		"description": "Triple A (3A) notation for testing"
+	},
+	"Typescript Region": {
+		"prefix": "ts-region",
+		"body": [
+			"// -----------------------------------------------------------------------------------------",
+			"// #region $1",
+			"// -----------------------------------------------------------------------------------------",
+			"",
+			"// #endregion $1"
+		],
+		"description": "Typescript region"
+	}
+}

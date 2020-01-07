@@ -1,0 +1,162 @@
+{
+	"XUnit Fact": {
+		"prefix": "xunit-fact",
+		"body": [
+			"[Fact]",
+			"public void ${1:Test_Name}()",
+			"{",
+			"\t// Arrange",
+			"",
+			"\t// Act",
+			"",
+			"\t// Assert",
+			"}",
+			""
+		]
+	},
+	"GetterSetter": {
+		"prefix": "gs",
+		"body": [
+			"{ get; set; }"
+		]
+	},
+	"AAA Notation": {
+		"prefix": "aaa",
+		"body": [
+			"// Arrange",
+			"",
+			"// Act",
+			"",
+			"// Assert",
+			""
+		]
+	},
+	"NFPA Api Controller": {
+		"prefix": "nfpa-controller",
+		"body": [
+			"using System;",
+			"using Microsoft.AspNetCore.Mvc;",
+			"",
+			"namespace Nfpa.CodesApi.Presentation.Web.Controllers.Api.V1.$1",
+			"{",
+			"    [FormatFilter]",
+			"    [Route(\"api/v1/myroute\")]",
+			"    public class $1Controller : CodesApiController",
+			"    {",
+			"        #region Properties",
+			"",
+			"        #endregion Properties",
+			"",
+			"        #region Constructor",
+			"",
+			"        #endregion Constructor",
+			"",
+			"        #region Public Methods",
+			"",
+			"        #region Create",
+			"",
+			"        [HttpPost]",
+			"        public IActionResult Create([FromBody] object dto)",
+			"        {",
+			"            throw new NotImplementedException();",
+			"",
+			"        }",
+			"",
+			"        #endregion Create",
+			"",
+			"        #region Delete",
+			"",
+			"        [HttpDelete(\"{id:long}\")]",
+			"        public IActionResult Delete([FromRoute] long id)",
+			"        {",
+			"            throw new NotImplementedException();",
+			"        }",
+			"",
+			"        #endregion Delete",
+			"",
+			"        #region Get",
+			"",
+			"        [HttpGet(\"{id:long}\")]",
+			"        public IActionResult Get([FromRoute] long id)",
+			"        {",
+			"            throw new NotImplementedException();",
+			"        }",
+			"",
+			"        #endregion Get",
+			"",
+			"        #region Index",
+			"",
+			"        [HttpGet]",
+			"        public IActionResult Index()",
+			"        {",
+			"            throw new NotImplementedException();",
+			"        }",
+			"",
+			"        #endregion",
+			"",
+			"        #region Update",
+			"",
+			"        [HttpPut(\"{id:long}\")]",
+			"        public IActionResult Update([FromRoute] long id, [FromBody] object dto)",
+			"        {",
+			"            throw new NotImplementedException();",
+			"        }",
+			"",
+			"        #endregion Update",
+			"",
+			"",
+			"",
+			"        #endregion Public Methods",
+			"",
+			"    }",
+			"}"
+		]
+	},
+	"Nfpa Controller Integration Test": {
+		"prefix": "nfpa-controller-integration-test",
+		"body": [
+			"using System;",
+			"using Nfpa.CodesApi.Presentation.Web.Controllers.Api.V1.$1;",
+			"using Nfpa.CodesApi.Tests.Presentation.Web.Tests.Integration.Controllers;",
+			"using Xunit;",
+			"using Xunit.Abstractions;",
+			"",
+			"namespace Nfpa.CodesApi.Presentation.Web.Tests.Integration.Controllers.Api.V1.$1",
+			"{",
+			"    [Collection(\"ControllerIntegration\")]",
+			"    public class $1ControllerTest : ControllerTest<$1Controller>, IDisposable",
+			"    {",
+			"        #region Setup",
+			"",
+			"        public $1ControllerTest(",
+			"            ControllerFixture fixture,",
+			"            ITestOutputHelper output)",
+			"            : base(fixture, output)",
+			"        {",
+			"",
+			"        }",
+			"",
+			"        #endregion Setup",
+			"    }",
+			"}"
+		]
+	},
+	"#region": {
+		"prefix": "region",
+		"body": [
+			"#region $1",
+			"",
+			"#endregion $1"
+		],
+		"description": "C# region with start and end Region name"
+	},
+	"AndCultureCode.DoTry": {
+		"prefix": "DoTry",
+		"body":[
+			"private IResult<${1:ReturnType}> ${2:MethodName}() => Do<$1>.Try((r) => {",
+			"",
+			"}).Result;"
+		],
+		"description": "andculturecode Do.Try pattern"
+	}
+}
